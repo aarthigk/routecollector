@@ -1,4 +1,5 @@
 package com.rti.routecollector;
+
 	
 	import java.io.File;
 
@@ -14,8 +15,9 @@ package com.rti.routecollector;
 
 	import org.apache.poi.ss.usermodel.Workbook;
 	import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+	import com.rti.routecollector.*;
 
-	public class ObalendaCaller {
+	public class ObalendaReader {
 
 	    public ArrayList<String> readExcel(String filePath,String fileName,String sheetName) throws IOException{
 	    File file =    new File(filePath+"\\"+fileName);
@@ -41,7 +43,7 @@ package com.rti.routecollector;
 	    Row row = busSheet.getRow(i);
 	    for (int j = 0; j < row.getLastCellNum();j++){
        
-	    a.add("From Obalende, Lagos "+"to "+row.getCell(j).getStringCellValue() +" bus stop");
+	    a.add("From Falmo "+"to "+row.getCell(j).getStringCellValue() +" bus stop");
 	    }   
 	   
 	  //  System.out.println();
